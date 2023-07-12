@@ -91,11 +91,6 @@ pipeline{
 					sh "terraform apply -no-color -var-file='prod.tfvars' --auto-approve"
 					}
 				}
-				// if("${env.ENVIRONMENT}".contains("stg")){
-				// 	withAWS(credentials: 'omni-aws-creds'){
-				// 	sh "terraform apply -no-color -var-file='stg.tfvars' --auto-approve"
-				// 	}
-				// }
 			}
 		}
 			}
