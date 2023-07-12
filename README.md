@@ -1,2 +1,2 @@
 # omni-mcleod-infra
-This repo is to main the resources related to mcleod
+This repo is to maintain the infra resources related to mcleod
