@@ -81,21 +81,21 @@ pipeline{
 	stage('Terraform Apply'){
 			steps{
 				script{
-				 if("${env.ENVIRONMENT}".contains("dev")){
-					withAWS(credentials: 'omni-aws-creds'){
-					sh "terraform apply -no-color -var-file='dev.tfvars' --auto-approve"
-					}
-				}
-				else if("${env.ENVIRONMENT}".contains("prod")){
+				//  if("${env.ENVIRONMENT}".contains("dev")){
+				// 	withAWS(credentials: 'omni-aws-creds'){
+				// 	sh "terraform apply -no-color -var-file='dev.tfvars' --auto-approve"
+				// 	}
+				// }
+				if("${env.ENVIRONMENT}".contains("prod")){
 					withAWS(credentials: 'omni-aws-creds'){
 					sh "terraform apply -no-color -var-file='prod.tfvars' --auto-approve"
 					}
 				}
-				else if("${env.ENVIRONMENT}".contains("stg")){
-					withAWS(credentials: 'omni-aws-creds'){
-					sh "terraform apply -no-color -var-file='stg.tfvars' --auto-approve"
-					}
-				}
+				// if("${env.ENVIRONMENT}".contains("stg")){
+				// 	withAWS(credentials: 'omni-aws-creds'){
+				// 	sh "terraform apply -no-color -var-file='stg.tfvars' --auto-approve"
+				// 	}
+				// }
 			}
 		}
 			}
