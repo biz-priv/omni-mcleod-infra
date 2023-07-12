@@ -120,3 +120,23 @@ variable "mcl_promotion_tier" {
   type     = string
   nullable = false
 }
+
+variable "mcl_performance_insights_enabled" {
+  type     = string
+  nullable = false
+}
+
+variable "mcl_monitoring_role_arn" {
+  type     = string
+  nullable = false
+}
+
+variable "mcl_monitoring_interval" {
+  type     = string
+  nullable = false
+}
+
+variable "mcl_enabled_cloudwatch_logs_exports" {
+  type     = list(any)
+  nullable = false
+}
