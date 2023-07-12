@@ -57,16 +57,6 @@ variable "mcl_port" {
   nullable = false
 }
 
-variable "mcl_master_username" {
-  type     = string
-  nullable = false
-}
-
-variable "mcl_master_password" {
-  type     = string
-  nullable = false
-}
-
 variable "mcl_backup_retention_period" {
   type     = string
   nullable = false
