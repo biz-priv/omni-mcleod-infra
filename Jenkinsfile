@@ -13,7 +13,6 @@ pipeline{
                     } else if ("${GIT_BRANCH}".contains("master")){
                         env.ENVIRONMENT="prod"
                     }
-                }
             }
         }
 		}
@@ -24,12 +23,13 @@ pipeline{
 					withAWS(credentials: 'omni-aws-creds'){
 					sh "terraform init -backend-config 'bucket=omni-toyota-terraform-state-dev' -backend-config 'region=us-east-1' -backend-config 'key=mcl_state/dev/terraform.tfstate' -migrate-state"
 				}
-				}
+				 }
 				else if("${env.ENVIRONMENT}".contains("prod")){
 					withAWS(credentials: 'omni-aws-creds'){
 					sh "terraform init -backend-config 'bucket=omni-toyota-terraform-state-prod' -backend-config 'region=us-east-1' -backend-config 'key=mcl_state/prod/terraform.tfstate' -migrate-state"
 				} 
-				}	
+				}
+	
 			}
 			}
 		}
@@ -48,10 +48,10 @@ pipeline{
 					}
 				}
                     
-            }
+               }
 			
         }
-    }
+      }
 	stage('Waiting for Approvals') {
 		when {
                 anyOf {
@@ -68,7 +68,7 @@ pipeline{
 	stage('Terraform Apply'){
 			steps{
 				script{
-				if("${env.ENVIRONMENT}".contains("dev")){
+				 if("${env.ENVIRONMENT}".contains("dev")){
 					withAWS(credentials: 'omni-aws-creds'){
 					sh "terraform apply -no-color -var-file='dev.tfvars' --auto-approve"
 					}
@@ -80,5 +80,7 @@ pipeline{
 				}
 			}
 		}
+			}
 	}
-}
+
+	}
