@@ -140,3 +140,58 @@ variable "mcl_enabled_cloudwatch_logs_exports" {
   type     = list(any)
   nullable = false
 }
+
+variable "lin_orders_glue_job_name" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_role_arn" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_version" {
+  type     = string
+  nullable = false
+}
+
+variable "lin_orders_no_of_workers" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_script_location" {
+  type     = string
+  nullable = false
+}
+
+variable "redshift_prod_datamodel_connection_name" {
+  type     = list(any)
+  nullable = false
+}
+
+variable "glue_job_max_concurrent_runs" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_custom_params" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_temp_dir" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_timeout" {
+  type     = string
+  nullable = false
+}
+
+variable "glue_job_worker_type" {
+  type     = string
+  nullable = false
+}
