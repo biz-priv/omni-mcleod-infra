@@ -28,7 +28,7 @@ resource "aws_rds_cluster" "mcleod_rds" {
   database_name                     = var.mcl_db_name
   port                              = var.mcl_port
   master_username                   = var.mcl_master_username
-  master_password                   = var.mcl_master_password
+  master_password                   = aws_ssm_parameter.mcl_rds_master_password.value
   backup_retention_period           = var.mcl_backup_retention_period
   preferred_backup_window           = var.mcl_preferred_backup_window
   preferred_maintenance_window      = var.mcl_preferred_maintenance_window
