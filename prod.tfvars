@@ -11,6 +11,7 @@ mcl_vpc_security_group_ids             		= ["sg-0394c6d99a53ba9a7"]
 mcl_deletion_protection                		= "true"
 mcl_db_name                            		= "dw_prod"
 mcl_port                               		= 3306
+mcl_master_username                    		= "admin"
 mcl_backup_retention_period            		= 7
 mcl_preferred_backup_window            		= "07:00-09:00"
 mcl_preferred_maintenance_window       		= "SAT:04:44-SAT:05:44"
