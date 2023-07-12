@@ -11,6 +11,12 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
   performance_insights_enabled 			= var.mcl_performance_insights_enabled
   monitoring_role_arn          			= var.mcl_monitoring_role_arn
   monitoring_interval          			= var.mcl_monitoring_interval
+  tags = {
+    Application = "Mcleod NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_rds_cluster" "mcleod_rds" {
@@ -29,9 +35,21 @@ resource "aws_rds_cluster" "mcleod_rds" {
   storage_encrypted                 = var.mcl_storage_encrypted
   db_subnet_group_name              = aws_db_subnet_group.mcleod_rds_subnet_group.name
   enabled_cloudwatch_logs_exports 	= var.mcl_enabled_cloudwatch_logs_exports
+  tags = {
+    Application = "Mcleod NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_db_subnet_group" "mcleod_rds_subnet_group" {
   name       							          = var.mcl_subnet_group_name
   subnet_ids 							          = var.mcl_subnet_group_id
+  tags = {
+    Application = "Mcleod NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
