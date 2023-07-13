@@ -5,12 +5,12 @@ kms_key_arn_for_dms                    = "arn:aws:kms:us-east-1:332281781429:key
 replication_subnet_group_id            = "default-vpc-ed4b2288"
 az                                     = "us-east-1c"
 #omni_dw RDS Instance Variables
-omni_dw_cluster_identifier                 = "omni-dw"
+omni_dw_cluster_identifier                 = "omni-dw-prod"
 omni_dw_cluster_engine                     = "aurora-mysql"
 omni_dw_engine_version                     = "5.7.mysql_aurora.2.11.2"
 omni_dw_vpc_security_group_ids             = ["sg-0394c6d99a53ba9a7"]
 omni_dw_deletion_protection                = "true"
-omni_dw_db_name                            = "dw"
+omni_dw_db_name                            = "dw_prod"
 omni_dw_port                               = 3306
 omni_dw_master_username                    = "admin"
 omni_dw_backup_retention_period            = 7

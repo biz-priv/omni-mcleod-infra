@@ -20,12 +20,12 @@ resource "aws_rds_cluster_instance" "omni_dw_cluster_instances" {
 }
 
 resource "aws_rds_cluster" "omni_dw_rds" {
-  cluster_identifier                = "${var.omni_dw_cluster_identifier}-${var.env}"
+  cluster_identifier                = var.omni_dw_cluster_identifier
   engine                            = var.omni_dw_cluster_engine
   engine_version                    = var.omni_dw_engine_version
   vpc_security_group_ids            = var.omni_dw_vpc_security_group_ids
   deletion_protection               = var.omni_dw_deletion_protection
-  database_name                     = "${var.omni_dw_db_name}-${var.env}"
+  database_name                     = var.omni_dw_db_name
   port                              = var.omni_dw_port
   master_username                   = var.omni_dw_master_username
   master_password                   = random_password.password.result
