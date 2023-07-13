@@ -22,116 +22,116 @@ variable "replication_subnet_group_id" {
   type     = string
   nullable = false
 }
-variable "mcl_cluster_identifier" {
+variable "omni_dw_cluster_identifier" {
   type     = string
   nullable = false
 }
 
-variable "mcl_cluster_engine" {
+variable "omni_dw_cluster_engine" {
   type     = string
   nullable = false
 }
 
-variable "mcl_engine_version" {
+variable "omni_dw_engine_version" {
   type     = string
   nullable = false
 }
 
-variable "mcl_vpc_security_group_ids" {
+variable "omni_dw_vpc_security_group_ids" {
   type     = list(any)
   nullable = false
 }
 
-variable "mcl_deletion_protection" {
+variable "omni_dw_deletion_protection" {
   type     = string
   nullable = false
 }
 
-variable "mcl_db_name" {
+variable "omni_dw_db_name" {
   type     = string
   nullable = false
 }
 
-variable "mcl_port" {
+variable "omni_dw_port" {
   type     = string
   nullable = false
 }
 
-variable "mcl_master_username" {
+variable "omni_dw_master_username" {
   type     = string
   nullable = false
 }
 
-variable "mcl_backup_retention_period" {
+variable "omni_dw_backup_retention_period" {
   type     = string
   nullable = false
 }
 
-variable "mcl_preferred_backup_window" {
+variable "omni_dw_preferred_backup_window" {
   type     = string
   nullable = false
 }
 
-variable "mcl_preferred_maintenance_window" {
+variable "omni_dw_preferred_maintenance_window" {
   type     = string
   nullable = false
 }
 
-variable "mcl_storage_encrypted" {
+variable "omni_dw_storage_encrypted" {
   type     = string
   nullable = false
 }
 
-variable "mcl_subnet_group_name" {
+variable "omni_dw_subnet_group_name" {
   type     = string
   nullable = false
 }
-variable "mcl_subnet_group_id" {
+variable "omni_dw_subnet_group_id" {
   type     = list(any)
   nullable = false
 }
 
-variable "mcl_writer_cluster_count" {
+variable "omni_dw_writer_cluster_count" {
   type     = string
   nullable = false
 }
 
-variable "mcl_instance_class" {
+variable "omni_dw_instance_class" {
   type     = string
   nullable = false
 }
 
-variable "mcl_ca_cert_identifier" {
+variable "omni_dw_ca_cert_identifier" {
   type     = string
   nullable = false
 }
 
-variable "mcl_publicly_accessible" {
+variable "omni_dw_publicly_accessible" {
   type     = string
   nullable = false
 }
 
-variable "mcl_promotion_tier" {
+variable "omni_dw_promotion_tier" {
   type     = string
   nullable = false
 }
 
-variable "mcl_performance_insights_enabled" {
+variable "omni_dw_performance_insights_enabled" {
   type     = string
   nullable = false
 }
 
-variable "mcl_monitoring_role_arn" {
+variable "omni_dw_monitoring_role_arn" {
   type     = string
   nullable = false
 }
 
-variable "mcl_monitoring_interval" {
+variable "omni_dw_monitoring_interval" {
   type     = string
   nullable = false
 }
 
-variable "mcl_enabled_cloudwatch_logs_exports" {
+variable "omni_dw_enabled_cloudwatch_logs_exports" {
   type     = list(any)
   nullable = false
 }
@@ -187,6 +187,31 @@ variable "glue_job_timeout" {
 }
 
 variable "glue_job_worker_type" {
+  type     = string
+  nullable = false
+}
+
+variable "omni_dw_aurora_rds_conn_name" {
+  type     = string
+  nullable = false
+}
+
+variable "omni_dw_aurora_connection_type" {
+  type     = string
+  nullable = false
+}
+
+variable "omni_dw_rds_endpoint" {
+  type     = string
+  nullable = false
+}
+
+variable "az" {
+  type     = string
+  nullable = false
+}
+
+variable "omni_dw_connection_subnet_id" {
   type     = string
   nullable = false
 }
