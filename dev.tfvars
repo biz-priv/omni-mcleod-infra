@@ -32,7 +32,7 @@ omni_dw_enabled_cloudwatch_logs_exports    = ["audit","error","general","slowque
 #Glue Connection variables
 omni_dw_aurora_rds_conn_name               = "omni_dw_prod_connection"
 omni_dw_aurora_connection_type             = "JDBC"
-omni_dw_rds_endpoint                       = "omni-dw-1.csqnwcsrz7o6.us-east-1.rds.amazonaws.com"
+omni_dw_rds_endpoint                       = "omni-dw-prod-1.csqnwcsrz7o6.us-east-1.rds.amazonaws.com"
 omni_dw_connection_subnet_id               = "subnet-0fdad83e0911ffc41"
 
 #Common Variables for Glue Job

@@ -10,3 +10,7 @@ resource "aws_ssm_parameter" "omni_dw_rds_master_password" {
     STAGE       = var.env
   }
 }
+
+data "aws_ssm_parameter" "omni_dw_get_rds_master_password" {
+  name = "/omni-dw/${var.env}/rds/db.password"
+}
