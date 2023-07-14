@@ -172,3 +172,27 @@ variable "az" {
 variable "omni_dw_connection_subnet_id" {
   type     = string
 }
+
+variable "wt_interface_ar_restlet_glue_job_name" {
+  type     = string
+}
+
+variable "wt_interface_ap_restlet_glue_job_name" {
+  type     = string
+}
+
+variable "ol_interface_ar_restlet_glue_job_name" {
+  type     = string
+}
+
+variable "cw_interface_ap_restlet_prod_glue_job_name" {
+  type     = string
+}
+
+variable "omni_dw_rds_conn_name" {
+  type     = list(any)
+}
+
+variable "omni_dw_pymysql_package_location" {
+  type     = string
+}
