@@ -5,7 +5,7 @@ resource "aws_glue_job" "lin_orders" {
   glue_version      = var.glue_job_version
   number_of_workers = var.lin_orders_no_of_workers
   worker_type       = var.glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.redshift_prod_datamodel_connection_name
   execution_property {
@@ -37,7 +37,7 @@ resource "aws_glue_job" "wt_interface_ar_restlet" {
   glue_version      = var.glue_job_version
   number_of_workers = var.wt_interface_ar_restlet_no_of_workers
   worker_type       = var.wt_interface_ar_restlet_glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
   execution_property {
@@ -73,7 +73,7 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
   glue_version      = var.glue_job_version
   number_of_workers = var.wt_interface_ap_restlet_no_of_workers
   worker_type       = var.glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
   execution_property {
@@ -109,7 +109,7 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
   glue_version      = var.glue_job_version
   number_of_workers = var.ol_interface_ar_restlet_no_of_workers
   worker_type       = var.glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
   execution_property {
@@ -145,7 +145,7 @@ resource "aws_glue_job" "cw_interface_ap_restlet" {
   glue_version      = var.glue_job_version
   number_of_workers = var.cw_interface_ar_restlet_no_of_workers
   worker_type       = var.glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
   execution_property {
@@ -181,7 +181,7 @@ resource "aws_glue_job" "lin_movement" {
   glue_version      = var.glue_job_version
   number_of_workers = var.lin_movement_no_of_workers
   worker_type       = var.glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.redshift_prod_datamodel_connection_name
   execution_property {
@@ -213,7 +213,7 @@ resource "aws_glue_job" "lin_movement-order" {
   glue_version      = var.glue_job_version
   number_of_workers = var.lin_movement_order_no_of_workers
   worker_type       = var.glue_job_worker_type
-  max_retries       = "1"
+  max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.redshift_prod_datamodel_connection_name
   execution_property {
