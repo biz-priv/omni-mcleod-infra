@@ -21,6 +21,8 @@ resource "aws_glue_job" "lin_orders" {
     "--enable-continuous-cloudwatch-log" = "true"
     "--conf"                             = var.glue_job_custom_params
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
@@ -57,6 +59,8 @@ resource "aws_glue_job" "wt_interface_ar_restlet" {
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
     "--PASSWORD"                         = var.omni_dw_ssm_param_username
     "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
@@ -93,6 +97,8 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
     "--PASSWORD"                         = var.omni_dw_ssm_param_username
     "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
@@ -129,6 +135,8 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
     "--PASSWORD"                         = var.omni_dw_ssm_param_username
     "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
@@ -165,6 +173,8 @@ resource "aws_glue_job" "cw_interface_ap_restlet" {
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
     "--PASSWORD"                         = var.omni_dw_ssm_param_username
     "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
@@ -197,6 +207,8 @@ resource "aws_glue_job" "lin_movement" {
     "--enable-continuous-cloudwatch-log" = "true"
     "--conf"                             = var.glue_job_custom_params
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
@@ -229,6 +241,8 @@ resource "aws_glue_job" "lin_movement-order" {
     "--enable-continuous-cloudwatch-log" = "true"
     "--conf"                             = var.glue_job_custom_params
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
+    "--enable-job-insights"              = "true"
+    "--job-language"                     = "python"
   }
   tags = {
     Application = "Omni DW NS Integration"
