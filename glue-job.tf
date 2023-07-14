@@ -56,7 +56,7 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
   description       = "Glue Job that runs dw-wt-interface-ap-restlet-prod.py PySpark script"
   role_arn          = var.glue_job_role_arn
   glue_version      = var.glue_job_version
-  number_of_workers = var.wt_interface_ar_restlet_no_of_workers
+  number_of_workers = var.wt_interface_ap_restlet_no_of_workers
   worker_type       = var.glue_job_worker_type
   max_retries       = "1"
   timeout           = var.glue_job_timeout
@@ -83,7 +83,7 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
   description       = "Glue Job that runs dw-ol-interface-ar-restlet-prod.py PySpark script"
   role_arn          = var.glue_job_role_arn
   glue_version      = var.glue_job_version
-  number_of_workers = var.wt_interface_ar_restlet_no_of_workers
+  number_of_workers = var.ol_interface_ar_restlet_no_of_workers
   worker_type       = var.glue_job_worker_type
   max_retries       = "1"
   timeout           = var.glue_job_timeout
@@ -110,7 +110,7 @@ resource "aws_glue_job" "cw_interface_ap_restlet" {
   description       = "Glue Job that runs dw-cw-interface-ap-restlet-prod.py PySpark script"
   role_arn          = var.glue_job_role_arn
   glue_version      = var.glue_job_version
-  number_of_workers = var.wt_interface_ar_restlet_no_of_workers
+  number_of_workers = var.cw_interface_ar_restlet_no_of_workers
   worker_type       = var.glue_job_worker_type
   max_retries       = "1"
   timeout           = var.glue_job_timeout

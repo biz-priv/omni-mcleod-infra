@@ -196,3 +196,23 @@ variable "omni_dw_rds_conn_name" {
 variable "omni_dw_pymysql_package_location" {
   type     = string
 }
+
+variable "wt_interface_ar_restlet_no_of_workers" {
+  type     = string
+}
+
+variable "wt_interface_ar_restlet_glue_job_worker_type" {
+  type     = string
+}
+
+variable "wt_interface_ap_restlet_no_of_workers" {
+  type     = string
+}
+
+variable "ol_interface_ar_restlet_no_of_workers" {
+  type     = string
+}
+
+variable "cw_interface_ar_restlet_no_of_workers" {
+  type     = string
+}
