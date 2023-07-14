@@ -22,6 +22,12 @@ resource "aws_glue_job" "lin_orders" {
     "--conf"                             = var.glue_job_custom_params
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
   }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_glue_job" "wt_interface_ar_restlet" {
@@ -48,6 +54,12 @@ resource "aws_glue_job" "wt_interface_ar_restlet" {
     "--conf"                             = var.glue_job_custom_params
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
   }
 }
 
@@ -76,6 +88,12 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
   }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_glue_job" "ol_interface_ap_restlet" {
@@ -103,6 +121,12 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
   }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_glue_job" "cw_interface_ap_restlet" {
@@ -129,5 +153,11 @@ resource "aws_glue_job" "cw_interface_ap_restlet" {
     "--conf"                             = var.glue_job_custom_params
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
   }
 }
