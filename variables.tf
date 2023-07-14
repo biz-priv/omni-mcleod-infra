@@ -236,3 +236,11 @@ variable "lin_movement_glue_job_name" {
 variable "lin_movement_no_of_workers" {
   type     = string
 }
+
+variable "lin_movement_order_glue_job_name" {
+  type     = string
+}
+
+variable "lin_movement_order_no_of_workers" {
+  type     = string
+}
