@@ -36,9 +36,9 @@ omni_dw_rds_endpoint                       = "omni-dw-prod-1.csqnwcsrz7o6.us-eas
 omni_dw_connection_subnet_id               = "subnet-0fdad83e0911ffc41"
 omni_dw_rds_conn_name                      = ["omni_dw_prod_connection"]
 omni_dw_pymysql_package_location           = "s3://dw-test-etl-job/PyMySQL-1.0.3-py3-none-any.whl"
-omni_dw_ssm_param_endpoint                 = "/omni-dw/${var.env}/rds/db.endpoint.ip"
-omni_dw_ssm_param_username                 = "/omni-dw/${var.env}/rds/db.username"
-omni_dw_ssm_param_password                 = "/omni-dw/${var.env}/rds/db.password"
+omni_dw_ssm_param_endpoint                 = "/omni-dw/prod/rds/db.endpoint.ip"
+omni_dw_ssm_param_username                 = "/omni-dw/prod/rds/db.username"
+omni_dw_ssm_param_password                 = "/omni-dw/prod/rds/db.password"
 
 
 #Common Variables for Glue Job
