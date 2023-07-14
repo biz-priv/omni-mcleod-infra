@@ -57,8 +57,8 @@ resource "aws_glue_job" "wt_interface_ar_restlet" {
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
-    "--PASSWORD"                         = var.omni_dw_ssm_param_username
-    "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--PASSWORD"                         = var.omni_dw_ssm_param_password
+    "--USERNAME"                         = var.omni_dw_ssm_param_username
     "--enable-job-insights"              = "true"
     "--job-language"                     = "python"
   }
@@ -95,8 +95,8 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
-    "--PASSWORD"                         = var.omni_dw_ssm_param_username
-    "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--PASSWORD"                         = var.omni_dw_ssm_param_password
+    "--USERNAME"                         = var.omni_dw_ssm_param_username
     "--enable-job-insights"              = "true"
     "--job-language"                     = "python"
   }
@@ -133,8 +133,8 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
-    "--PASSWORD"                         = var.omni_dw_ssm_param_username
-    "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--PASSWORD"                         = var.omni_dw_ssm_param_password
+    "--USERNAME"                         = var.omni_dw_ssm_param_username
     "--enable-job-insights"              = "true"
     "--job-language"                     = "python"
   }
@@ -171,8 +171,8 @@ resource "aws_glue_job" "cw_interface_ap_restlet" {
     "--TempDir"                          = "s3://${var.glue_job_temp_dir}/"
     "--additional-python-modules"        = var.omni_dw_pymysql_package_location
     "--ENDPOINT"                         = var.omni_dw_ssm_param_endpoint
-    "--PASSWORD"                         = var.omni_dw_ssm_param_username
-    "--USERNAME"                         = var.omni_dw_ssm_param_password
+    "--PASSWORD"                         = var.omni_dw_ssm_param_password
+    "--USERNAME"                         = var.omni_dw_ssm_param_username
     "--enable-job-insights"              = "true"
     "--job-language"                     = "python"
   }
