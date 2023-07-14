@@ -216,3 +216,15 @@ variable "ol_interface_ar_restlet_no_of_workers" {
 variable "cw_interface_ar_restlet_no_of_workers" {
   type     = string
 }
+
+variable "omni_dw_ssm_param_endpoint" {
+  type     = string
+}
+
+variable "omni_dw_ssm_param_username" {
+  type     = string
+}
+
+variable "omni_dw_ssm_param_password" {
+  type     = string
+}
