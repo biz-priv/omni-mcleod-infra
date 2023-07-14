@@ -105,7 +105,7 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
   }
 }
 
-resource "aws_glue_job" "aw_interface_ap_restlet" {
+resource "aws_glue_job" "cw_interface_ap_restlet" {
   name              = var.cw_interface_ap_restlet_prod_glue_job_name
   description       = "Glue Job that runs dw-cw-interface-ap-restlet-prod.py PySpark script"
   role_arn          = var.glue_job_role_arn
