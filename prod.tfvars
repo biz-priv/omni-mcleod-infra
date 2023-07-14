@@ -36,6 +36,10 @@ omni_dw_rds_endpoint                       = "omni-dw-prod-1.csqnwcsrz7o6.us-eas
 omni_dw_connection_subnet_id               = "subnet-0fdad83e0911ffc41"
 omni_dw_rds_conn_name                      = ["omni_dw_prod_connection"]
 omni_dw_pymysql_package_location           = "s3://dw-test-etl-job/PyMySQL-1.0.3-py3-none-any.whl"
+omni_dw_ssm_param_endpoint                 = "/omni-dw/${var.env}/rds/db.endpoint.ip"
+omni_dw_ssm_param_username                 = "/omni-dw/${var.env}/rds/db.username"
+omni_dw_ssm_param_password                 = "/omni-dw/${var.env}/rds/db.password"
+
 
 #Common Variables for Glue Job
 glue_job_role_arn                      = "arn:aws:iam::332281781429:role/service-role/AWSGlueServiceRole-shipment-apar-poc"
@@ -51,6 +55,14 @@ glue_job_timeout                       = 2880
 #lin_orders GlueJob
 lin_orders_glue_job_name               = "lin-orders"
 lin_orders_no_of_workers               = 2
+
+#lin_movement glue job
+lin_movement_glue_job_name             = "lin-movement"
+lin_movement_no_of_workers             = 2
+
+#lin_movement_order glue job
+lin_movement_order_glue_job_name       = "lin-movement-order"
+lin_movement_order_no_of_workers       = 2
 
 #dw-wt-interface-ar-restlet-prod glue job
 wt_interface_ar_restlet_glue_job_name     = "dw-wt-interface-ar-restlet-prod"
