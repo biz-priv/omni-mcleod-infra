@@ -49,7 +49,7 @@ redshift_prod_datamodel_connection_name= ["prod_datamodel"]
 glue_job_timeout                       = 2880
 
 #lin_orders GlueJob
-lin_orders_glue_job_name               = "lin_orders"
+lin_orders_glue_job_name               = "lin-orders"
 lin_orders_no_of_workers               = 2
 
 #dw-wt-interface-ar-restlet-prod glue job
