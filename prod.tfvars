@@ -34,18 +34,32 @@ omni_dw_aurora_rds_conn_name               = "omni_dw_prod_connection"
 omni_dw_aurora_connection_type             = "JDBC"
 omni_dw_rds_endpoint                       = "omni-dw-prod-1.csqnwcsrz7o6.us-east-1.rds.amazonaws.com"
 omni_dw_connection_subnet_id               = "subnet-0fdad83e0911ffc41"
+omni_dw_rds_conn_name                      = ["omni_dw_prod_connection"]
+omni_dw_pymysql_package_location           = "s3://dw-test-etl-job/PyMySQL-1.0.3-py3-none-any.whl"
 
 #Common Variables for Glue Job
 glue_job_role_arn                      = "arn:aws:iam::332281781429:role/service-role/AWSGlueServiceRole-shipment-apar-poc"
 glue_job_version                       = "3.0"
 glue_job_worker_type                   = "G.1X"
-glue_job_script_location               = "dw-glueetl-dev/Scripts"
+glue_job_script_location               = "dw-glueetl-prod/Scripts"
 glue_job_max_concurrent_runs           = 1
 glue_job_custom_params                 = "spark.executor.cores=8 --conf spark.sql.shuffle.partitions=200 --conf spark.sql.legacy.parquet.datetimeRebaseModeInRead=CORRECTED --conf spark.sql.legacy.parquet.datetimeRebaseModeInWrite=CORRECTED"
-glue_job_temp_dir                      = "dw-glueetl-dev/Temp"
+glue_job_temp_dir                      = "dw-glueetl-prod/Temp"
 redshift_prod_datamodel_connection_name= ["prod_datamodel"]
 glue_job_timeout                       = 2880
 
 #lin_orders GlueJob
 lin_orders_glue_job_name               = "lin_orders"
 lin_orders_no_of_workers               = 2
+
+#dw-wt-interface-ar-restlet-prod glue job
+wt_interface_ar_restlet_glue_job_name     = "dw-wt-interface-ar-restlet-prod"
+
+#dw-wt-interface-ap-restlet-prod glue job
+wt_interface_ap_restlet_glue_job_name     = "dw-wt-interface-ap-restlet-prod"
+
+#dw-ol-interface-ar-restlet-prod glue job
+ol_interface_ar_restlet_glue_job_name     = "dw-ol-interface-ar-restlet-prod"
+
+#dw-cw-interface-ap-restlet-prod glue job
+cw_interface_ap_restlet_prod_glue_job_name= "dw-cw-interface-ap-restlet-prod"
