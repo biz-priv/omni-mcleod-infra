@@ -6,6 +6,12 @@ resource "aws_glue_trigger" "lin_order_trigger" {
   actions {
     job_name = var.lin_orders_glue_job_name
   }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_glue_trigger" "lin_movement_trigger" {
@@ -16,6 +22,12 @@ resource "aws_glue_trigger" "lin_movement_trigger" {
   actions {
     job_name = var.lin_movement_glue_job_name
   }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
 }
 
 resource "aws_glue_trigger" "lin_movement_order_trigger" {
@@ -25,5 +37,11 @@ resource "aws_glue_trigger" "lin_movement_order_trigger" {
 
   actions {
     job_name = var.lin_movement_order_glue_job_name
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
   }
 }
