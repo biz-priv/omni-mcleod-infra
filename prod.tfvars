@@ -65,19 +65,19 @@ lin_movement_order_glue_job_name       = "lin-movement-order"
 lin_movement_order_no_of_workers       = 2
 
 #dw-wt-interface-ar-restlet-prod glue job
-wt_interface_ar_restlet_glue_job_name     = "dw-wt-interface-ar-restlet-prod"
+wt_interface_ar_restlet_glue_job_name     = "dw-wt-interface-ar-restlet-prod" #dw-wt-interface-ar-restlet-prod-copy
 wt_interface_ar_restlet_no_of_workers     = 40
 wt_interface_ar_restlet_glue_job_worker_type = "G.2X"
 
 #dw-wt-interface-ap-restlet-prod glue job
-wt_interface_ap_restlet_glue_job_name     = "dw-wt-interface-ap-restlet-prod"
-wt_interface_ap_restlet_no_of_workers     = 20
+wt_interface_ap_restlet_glue_job_name     = "dw-wt-interface-ap-restlet-prod" #dw-wt-interface-ap-restlet-prod-copy
+wt_interface_ap_restlet_no_of_workers     = 40
 wt_interface_ap_restlet_glue_job_worker_type = "G.2X"
 
 #dw-ol-interface-ar-restlet-prod glue job
-ol_interface_ar_restlet_glue_job_name     = "dw-ol-interface-ar-restlet-prod"
+ol_interface_ar_restlet_glue_job_name     = "dw-ol-interface-ar-restlet-prod" #dw-ol-interface-ar-restlet-prod-copy
 ol_interface_ar_restlet_no_of_workers     = 10
 
 #dw-cw-interface-ap-restlet-prod glue job
-cw_interface_ap_restlet_prod_glue_job_name= "dw-cw-interface-ap-restlet-prod"
+cw_interface_ap_restlet_prod_glue_job_name= "dw-cw-interface-ap-restlet-prod" #dw-cw-interface-ap-restlet-prod-copy
 cw_interface_ar_restlet_no_of_workers     = 10
