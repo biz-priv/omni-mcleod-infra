@@ -244,3 +244,7 @@ variable "lin_movement_order_glue_job_name" {
 variable "lin_movement_order_no_of_workers" {
   type     = string
 }
+
+variable "wt_interface_ap_restlet_glue_job_worker_type" {
+  type     = string
+}

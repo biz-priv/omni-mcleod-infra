@@ -76,7 +76,7 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
   role_arn          = var.glue_job_role_arn
   glue_version      = var.glue_job_version
   number_of_workers = var.wt_interface_ap_restlet_no_of_workers
-  worker_type       = var.glue_job_worker_type
+  worker_type       = var.wt_interface_ap_restlet_glue_job_worker_type
   max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
