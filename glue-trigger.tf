@@ -45,3 +45,63 @@ resource "aws_glue_trigger" "lin_movement_order_trigger" {
     STAGE       = var.env
   }
 }
+
+resource "aws_glue_trigger" "wt_interface_ar_restlet_trigger" {
+  name     = "${var.wt_interface_ar_restlet_glue_job_name}-trigger"
+  type     = "ON_DEMAND"
+
+  actions {
+    job_name = var.wt_interface_ar_restlet_glue_job_name
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
+}
+
+resource "aws_glue_trigger" "wt_interface_ap_restlet_trigger" {
+  name     = "${var.wt_interface_ap_restlet_glue_job_name}-trigger"
+  type     = "ON_DEMAND"
+
+  actions {
+    job_name = var.wt_interface_ap_restlet_glue_job_name
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
+}
+
+resource "aws_glue_trigger" "ol_interface_ar_restlet_trigger" {
+  name     = "${var.ol_interface_ar_restlet_glue_job_name}-trigger"
+  type     = "ON_DEMAND"
+
+  actions {
+    job_name = var.ol_interface_ar_restlet_glue_job_name
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
+}
+
+resource "aws_glue_trigger" "cw_interface_ap_restlet_trigger" {
+  name     = "${var.cw_interface_ap_restlet_prod_glue_job_name}-trigger"
+  type     = "ON_DEMAND"
+
+  actions {
+    job_name = var.cw_interface_ap_restlet_prod_glue_job_name
+  }
+  tags = {
+    Application = "Omni DW NS Integration"
+    CreatedBy   = "BizCloudExperts"
+    Environment = var.env
+    STAGE       = var.env
+  }
+}
