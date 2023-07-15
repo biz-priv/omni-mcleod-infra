@@ -103,7 +103,7 @@ resource "aws_ssm_parameter" "omni_dw_finance_db_port" {
 }
 
 resource "aws_ssm_parameter" "omni_ns_mcl_customer_key" {
-  name  = "/omni-dw/prod/netsuitMCL/authConfig/consumerKey"
+  name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/consumerKey"
   type  = "SecureString"
   value = random_password.password.result
 
@@ -116,7 +116,7 @@ resource "aws_ssm_parameter" "omni_ns_mcl_customer_key" {
 }
 
 resource "aws_ssm_parameter" "omni_ns_mcl_customer_secret" {
-  name  = "/omni-dw/prod/netsuitMCL/authConfig/consumerSecret"
+  name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/consumerSecret"
   type  = "SecureString"
   value = random_password.password.result
 
@@ -129,7 +129,7 @@ resource "aws_ssm_parameter" "omni_ns_mcl_customer_secret" {
 }
 
 resource "aws_ssm_parameter" "omni_ns_mcl_token_key" {
-  name  = "/omni-dw/prod/netsuitMCL/authConfig/tokenKeyMCL"
+  name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/tokenKeyMCL"
   type  = "SecureString"
   value = random_password.password.result
 
@@ -142,7 +142,7 @@ resource "aws_ssm_parameter" "omni_ns_mcl_token_key" {
 }
 
 resource "aws_ssm_parameter" "omni_ns_mcl_token_secret" {
-  name  = "/omni-dw/prod/netsuitMCL/authConfig/tokenSecretMCL"
+  name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/tokenSecretMCL"
   type  = "SecureString"
   value = random_password.password.result
 
