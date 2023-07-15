@@ -105,7 +105,7 @@ resource "aws_ssm_parameter" "omni_dw_finance_db_port" {
 resource "aws_ssm_parameter" "omni_ns_mcl_customer_key" {
   name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/consumerKey"
   type  = "SecureString"
-  value = random_password.password.result
+  value = "dc5a854e86c5bd48417c26ec1287cb5577f19d147acb48415e95ceb475ce04a5"
 
   tags = {
     Application = "Omni DW NS Integration"
@@ -118,7 +118,7 @@ resource "aws_ssm_parameter" "omni_ns_mcl_customer_key" {
 resource "aws_ssm_parameter" "omni_ns_mcl_customer_secret" {
   name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/consumerSecret"
   type  = "SecureString"
-  value = random_password.password.result
+  value = "4c53c17215ace3a0d0cb2530685c3609488ab7b8a2e3c3c0fe499779bd6c108a"
 
   tags = {
     Application = "Omni DW NS Integration"
@@ -131,7 +131,7 @@ resource "aws_ssm_parameter" "omni_ns_mcl_customer_secret" {
 resource "aws_ssm_parameter" "omni_ns_mcl_token_key" {
   name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/tokenKeyMCL"
   type  = "SecureString"
-  value = random_password.password.result
+  value = "57c7ad8e5b88cdf0f4614066cc17822c3e57b5cfa596e54b6bbfa2dc2f7c4c4b"
 
   tags = {
     Application = "Omni DW NS Integration"
@@ -144,7 +144,7 @@ resource "aws_ssm_parameter" "omni_ns_mcl_token_key" {
 resource "aws_ssm_parameter" "omni_ns_mcl_token_secret" {
   name  = "/omni-dw/${var.env}/netsuitMCL/authConfig/tokenSecretMCL"
   type  = "SecureString"
-  value = random_password.password.result
+  value = "35b585473e5352b8120c7da0865fc6e4c3315a91e96458296fb091c35f2d4d81"
 
   tags = {
     Application = "Omni DW NS Integration"
