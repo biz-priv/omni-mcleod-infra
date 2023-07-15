@@ -51,6 +51,7 @@ glue_job_custom_params                 = "spark.executor.cores=8 --conf spark.sq
 glue_job_temp_dir                      = "dw-glueetl-prod/Temp"
 redshift_prod_datamodel_connection_name= ["prod_datamodel"]
 glue_job_timeout                       = 2880
+glue_trigger_lin_cron_expression           = "cron(0 */3 * * ? *)"
 
 #lin_orders GlueJob
 lin_orders_glue_job_name               = "lin-orders"

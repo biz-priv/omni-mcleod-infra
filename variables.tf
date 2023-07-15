@@ -248,3 +248,7 @@ variable "lin_movement_order_no_of_workers" {
 variable "wt_interface_ap_restlet_glue_job_worker_type" {
   type     = string
 }
+
+variable "glue_trigger_lin_cron_expression" {
+  type     = string
+}
