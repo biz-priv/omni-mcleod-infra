@@ -42,6 +42,7 @@ resource "aws_glue_job" "wt_interface_ar_restlet" {
   max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
+  execution_class   = "STANDARD"
   execution_property {
     max_concurrent_runs = var.glue_job_max_concurrent_runs
   }
@@ -80,6 +81,7 @@ resource "aws_glue_job" "wt_interface_ap_restlet" {
   max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
+  execution_class   = "STANDARD"
   execution_property {
     max_concurrent_runs = var.glue_job_max_concurrent_runs
   }
@@ -118,6 +120,7 @@ resource "aws_glue_job" "ol_interface_ap_restlet" {
   max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
+  execution_class   = "STANDARD"
   execution_property {
     max_concurrent_runs = var.glue_job_max_concurrent_runs
   }
@@ -156,6 +159,7 @@ resource "aws_glue_job" "cw_interface_ap_restlet" {
   max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.omni_dw_rds_conn_name
+  execution_class   = "STANDARD"
   execution_property {
     max_concurrent_runs = var.glue_job_max_concurrent_runs
   }
