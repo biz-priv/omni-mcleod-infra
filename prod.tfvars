@@ -71,7 +71,7 @@ wt_interface_ar_restlet_glue_job_worker_type = "G.2X"
 
 #dw-wt-interface-ap-restlet-prod glue job
 wt_interface_ap_restlet_glue_job_name     = "dw-wt-interface-ap-restlet-prod"
-wt_interface_ap_restlet_no_of_workers     = 20
+wt_interface_ap_restlet_no_of_workers     = 40
 wt_interface_ap_restlet_glue_job_worker_type = "G.2X"
 
 #dw-ol-interface-ar-restlet-prod glue job
