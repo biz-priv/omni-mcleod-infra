@@ -8,6 +8,7 @@ resource "aws_glue_job" "lin_orders" {
   max_retries       = "0"
   timeout           = var.glue_job_timeout
   connections       = var.redshift_prod_datamodel_connection_name
+  execution_class   = "STANDARD"
   execution_property {
     max_concurrent_runs = var.glue_job_max_concurrent_runs
   }
