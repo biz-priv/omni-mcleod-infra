@@ -252,3 +252,7 @@ variable "wt_interface_ap_restlet_glue_job_worker_type" {
 variable "glue_trigger_lin_cron_expression" {
   type     = string
 }
+
+variable "topic_name" {
+  type     = string
+}
