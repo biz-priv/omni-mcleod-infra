@@ -4,6 +4,10 @@ aws_account_number                     = "332281781429"
 kms_key_arn_for_dms                    = "arn:aws:kms:us-east-1:332281781429:key/f786e3aa-7612-40da-aafa-dd21b2ab2e1d"
 replication_subnet_group_id            = "default-vpc-ed4b2288"
 az                                     = "us-east-1c"
+
+#SNS Topic & Subscriptions
+topic_name                                 = "omni-finance-integration-errors"
+
 #omni_dw RDS Instance Variables
 omni_dw_cluster_identifier                 = "omni-dw-prod"
 omni_dw_cluster_engine                     = "aurora-mysql"
