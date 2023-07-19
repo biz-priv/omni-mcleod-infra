@@ -29,9 +29,5 @@ resource "aws_cloudwatch_event_rule" "omni_dw_finance_integration_error_rule" {
 resource "aws_cloudwatch_event_target" "omni_dw_integration_sns_target" {
   rule      = aws_cloudwatch_event_rule.omni_dw_finance_integration_error_rule.name
   target_id = "SendToSNS"
-  arn       = aws_sns_topic.omni_dw_integration_sns_topic_name.arn
-}
-
-resource "aws_sns_topic" "omni_dw_integration_sns_topic_name" {
-  name = var.topic_name
+  arn       = "arn:aws:sns:us-east-1:332281781429:omni-finance-integration-errors"
 }
