@@ -48,7 +48,7 @@ resource "aws_glue_trigger" "lin_movement_order_trigger" {
 
 resource "aws_glue_trigger" "wt_interface_ar_restlet_trigger" {
   name     = "${var.wt_interface_ar_restlet_glue_job_name}-trigger"
-  schedule = "cron(00 06 * * ? *)"
+  schedule = "cron(00 05 * * ? *)"
   type     = "SCHEDULED"
 
   actions {
