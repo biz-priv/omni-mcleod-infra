@@ -48,7 +48,8 @@ resource "aws_glue_trigger" "lin_movement_order_trigger" {
 
 resource "aws_glue_trigger" "wt_interface_ar_restlet_trigger" {
   name     = "${var.wt_interface_ar_restlet_glue_job_name}-trigger"
-  type     = "ON_DEMAND"
+  schedule = "cron(00 06 * * ? *)"
+  type     = "SCHEDULED"
 
   actions {
     job_name = var.wt_interface_ar_restlet_glue_job_name
@@ -63,7 +64,8 @@ resource "aws_glue_trigger" "wt_interface_ar_restlet_trigger" {
 
 resource "aws_glue_trigger" "wt_interface_ap_restlet_trigger" {
   name     = "${var.wt_interface_ap_restlet_glue_job_name}-trigger"
-  type     = "ON_DEMAND"
+  schedule = "cron(30 12,17,22 * * ? *)"
+  type     = "SCHEDULED"
 
   actions {
     job_name = var.wt_interface_ap_restlet_glue_job_name
